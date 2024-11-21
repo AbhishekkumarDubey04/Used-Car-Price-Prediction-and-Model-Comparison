@@ -1,0 +1,57 @@
+1.Introduction
+The used car market represents a significant segment of the global automotive industry. With an increasing number of buyers and sellers, determining an accurate price for used cars remains a complex task. Traditionally, car prices have been estimated using price guides, dealership appraisals, and manual evaluations. However, these methods do not always take into account the multitude of influencing factors such as market trends, vehicle condition, and economic conditions.
+Machine learning, however, offers an opportunity to build predictive models that can incorporate multiple variables and learn complex relationships between the features and car prices. In this project, I have implemented machine learning algorithms to predict the prices of used cars based on various features.
+The project objectives include:
+Data Preprocessing: Cleaning the used car sales dataset, handling missing values, and transforming categorical features.
+Model Development: Implementing four machine learning models:
+• Linear Regression
+Linear Regression is a model that predicts a value based on a straight-line relationship between two or more factors. For example, it can predict a car’s price based on its mileage, age, and engine power. It’s useful for estimating or understanding how one factor affects another.
+• Decision Tree
+A Decision Tree is a model that makes decisions by following a series of yes/no questions, splitting the data at each question. It sorts the data into groups at each step until it reaches a final prediction. Decision Trees are simple and easy to understand because they look like flowcharts.
+• K-Nearest Neighbors (KNN)
+K-Nearest Neighbors is a model that makes predictions based on the most similar past examples. For example, if we want to predict the price of a car, it will look at prices of the nearest cars with similar characteristics and take an average. This model is straightforward but can be slow with a lot of data.
+• Support Vector Machine (SVM)
+Support Vector Machine is a model that finds the best dividing line (or surface) to separate data into categories. It tries to place this line in a way that leaves the largest possible space on either side, separating the groups as clearly as possible. It’s commonly used for complex tasks like sorting images or texts into categories.
+
+2. Scope of the Analysis
+This project aims to develop a machine learning-based system to predict used car prices with high accuracy. The scope of the analysis covers the following stages:
+• Data Collection: The dataset used in this project contains a variety of features including mileage, engine size, power, fuel type, and car price. The data was sourced from a publicly available used car sales database.
+• Data Preprocessing: Cleaning the dataset by handling missing data, transforming categorical variables into numeric format, and scaling the numerical features for consistency.
+• Model Development: Four machine learning algorithms (Linear Regression, Decision Tree, K-Nearest Neighbors (KNN), and Support Vector Machine (SVM)) were applied to predict the target variable: car price.
+• Dashboard Development: An interactive Shiny dashboard was created to allow users to input vehicle features and predict the corresponding price, with real-time model comparisons.
+• Model Evaluation: The models were evaluated based on their prediction accuracy, using MAE to compare the performance of each model.
+
+3.Analysis on Dataset
+
+i. Introduction
+The main goal of this analysis is to predict the price of a used car based on its features. The dataset includes several independent variables that may affect the car’s price.
+I applied four machine learning algorithms: Linear Regression, Decision Tree, K-Nearest Neighbors (KNN), and Support Vector Machine (SVM) to build predictive models.
+
+ii. General Description
+The dataset consists of the following key features:
+• Mileage: Distance driven in kilometers.
+• Engine: Engine size in cubic centimeters (CC).
+• Power: Engine power in brake horsepower (bhp).
+• Fuel_Type: Type of fuel used by the car (e.g., Petrol, Diesel).
+• Price: The target variable represents the car’s price.
+
+iii. Specific Requirements, Functions, and Formulas
+• Linear Regression: The formula used is lm(Price ~ Mileage + Engine + Power + Fuel_Type).
+• Decision Tree: Regression tree created using the rpart package.
+• KNN: The KNN model was implemented with k=5, considering the nearest neighbors.
+• SVM: Support Vector Regression was used with a radial basis kernel.
+
+iv. Analysis Results
+Each model was evaluated using Mean Absolute Error (MAE), which measures the average magnitude of the errors in the predictions:
+Linear Regression: MAE = 3.72 Decision Tree: MAE = 3.04
+KNN: MAE = 2.62 SVM: MAE = 1.94
+
+v. Visualization (Dashboard)
+To aid in visualizing the analysis, I developed an interactive Shiny Dashboard. This dashboard allows users to input car details (e.g., mileage, engine size, fuel type) and see the predicted price based on the selected model. The dashboard also provides a visual comparison of the performance of each model using plots for the predicted prices and actual values, helping users assess model accuracy.
+
+4. List of Analysis with Results
+• Linear Regression: Predicted car price using a linear model. MAE = 3.72.
+• Decision Tree: Captured non-linear relationships. MAE = 3.04.
+• KNN: Used nearest neighbors for prediction. MAE = 2.62.
+• SVM: Utilized support vector regression with radial kernel. MAE = 1.94.
+Based on the Mean Absolute Error (MAE) values provided, Support Vector Machine (SVM) gives the best result for predicting car prices, with the lowest MAE of 1.94. A lower MAE indicates that the SVM model's predictions are closer to the actual car prices, making it the most accurate model among the four options tested.
